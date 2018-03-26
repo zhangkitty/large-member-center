@@ -1,14 +1,9 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "modules": false
-      }
-    ],
-    "react"
+  "presets": ["react-app"],
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-object-rest-spread"
   ],
-  "plugins": ["syntax-dynamic-import"],
   "env": {
     "test": {
       "presets": [

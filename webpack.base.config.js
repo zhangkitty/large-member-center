@@ -14,6 +14,7 @@ module.exports = {
       'react-router',
       'react-router-redux',
       'redux-saga',
+      'shineout',
       'object-assign',
       'classnames',
       'whatwg-fetch',
@@ -50,6 +51,27 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.js$/,
+        include: /node_modules\/shineout/,
+        loaders: ['babel-loader'],
+      },
+      {
+        test: /\.less$/,
+        include: /node_modules\/shineout/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              modifyVars: {
+                'so-theme': 'antd'
+              },
+            }
+          }
+        ]
       },
       {
         test: /component\/([^/]+\/)*type[s]?.js$/,
