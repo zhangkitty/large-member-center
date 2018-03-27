@@ -6635,9 +6635,9 @@ shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
-shineout@^0.1.0-beta-4:
-  version "0.1.0-beta-4"
-  resolved "https://registry.npmjs.org/shineout/-/shineout-0.1.0-beta-4.tgz#b683cd703c73e88a455a2e5efe63a49602170683"
+shineout@^0.1.0-beta-5:
+  version "0.1.0-beta-5"
+  resolved "https://registry.npmjs.org/shineout/-/shineout-0.1.0-beta-5.tgz#67c3057bba56dca4906398f19be7d5ece67b704a"
   dependencies:
     classnames "^2.2.5"
     create-react-context "^0.2.1"
