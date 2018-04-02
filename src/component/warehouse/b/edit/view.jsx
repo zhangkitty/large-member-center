@@ -44,19 +44,15 @@ class Container extends PureComponent {
 
           <Form.Item required label="生产制单">
             <Form.Field name="produceOrderId">
-              {props => <AntdInput {...props} />}
+              <AntdInput />
             </Form.Field>
           </Form.Item>
 
           <Form.Item required label="前景色">
             <Form.Field name="frontColor">
-              {
-                props =>
-                  (<AntdCheckbox.Group
-                    {...props}
-                    options={this.colors.map(c => ({ label: c, value: c }))}
-                  />)
-              }
+              <AntdCheckbox.Group
+                options={this.colors.map(c => ({ label: c, value: c }))}
+              />
             </Form.Field>
           </Form.Item>
 
