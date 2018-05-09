@@ -1,4 +1,4 @@
-import fetch from 'whatwg-fetch';
+import 'whatwg-fetch';
 import { notification } from 'antd';
 import assign from 'object-assign';
 

@@ -6,7 +6,10 @@ export const defaultState = {
   ready: true,
   list: [],
   formData: {
-    kkk: '',
+    kkk: [
+      'name',
+      '',
+    ],
   },
   secondaryProcess: '',
   produceOrderId: '',
