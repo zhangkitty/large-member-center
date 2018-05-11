@@ -35,7 +35,7 @@
     "react-router-redux": "^5.0.0-alpha.8",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
-    "rrc-loader-helper": "^1.2.3",
+    "rrc-loader-helper": "^1.2.5",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
