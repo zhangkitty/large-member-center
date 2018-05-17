@@ -8,6 +8,26 @@
 </head>
 <body>
 <div id="container"></div>
+<script>
+    ! function (f, b, e, v, n, t, s) {
+        if (f.sheinq) return;
+        n = f.sheinq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._sheinq) f._sheinq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '1.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script', 'http://39.108.149.2/burypoint/bundle.js');
+    // sheinq.push('init', '此处放你的埋点id','PV');
+</script>
 <script src="https://statics.sheinside.cn/common/??babel-polyfill/6.26.0/polyfill.min.js,react/16.2.0/umd/react.production.min.js,lodash/4.17.4/lodash.min.js,react-dom/16.2.0/umd/react-dom.production.min.js">
 </script>
 <script src="https://statics.sheinside.cn/common/moment/2.18.1/moment.min.js"></script>
