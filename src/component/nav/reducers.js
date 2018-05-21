@@ -14,9 +14,10 @@ const menus = [
       },
       {
         link: '/warehouse/b',
-        title: '子功能1-immer方式',
-        icon: 'mail',
+        title: '子功能2',
+        icon: 'user',
       },
+
     ],
   },
 ];

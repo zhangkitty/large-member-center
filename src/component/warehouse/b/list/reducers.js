@@ -1,3 +1,4 @@
+import assign from 'object-assign';
 import { getSize } from 'shein-middlewares/pagesize';
 import * as types from './types';
 
@@ -5,10 +6,7 @@ export const defaultState = {
   ready: true,
   list: [],
   formData: {
-    kkk: [
-      'name',
-      '',
-    ],
+    kkk: '',
   },
   secondaryProcess: '',
   produceOrderId: '',
@@ -22,22 +20,31 @@ export const defaultState = {
   recordCount: '',
 };
 
-export default {
-  defaultState,
-  [types.init]() {
-    return defaultState;
-  },
-  [types.initSet](draft, action) {
-    draft.ready = false;
-    draft.data = action.data;
-    draft.list = action.data.list;
-  },
-  [types.search](draft) {
-    draft.dataLoading = true;
-  },
-  [types.searchSet](draft, action) {
-    draft.dataLoading = false;
-    draft.data = action.data;
-    draft.list = action.data.list;
-  },
+const reducer = (state = defaultState, action) => {
+  switch (action.type) {
+    case types.init:
+      return defaultState;
+    case types.initSet:
+      return assign({}, state, action.data, {
+        ready: false,
+        list: action.data.list,
+      });
+    case types.search:
+      return assign({}, state, {
+        dataLoading: true,
+      });
+    case types.searchSet:
+      return assign({}, state, action.data, {
+        dataLoading: false,
+        list: action.data.list,
+      });
+    case types.changeValue:
+      return assign({}, state, {
+        [action.key]: action.value,
+      });
+    default:
+      return state;
+  }
 };
+
+export default reducer;

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Table } from 'antd';
+import { Table } from 'shineout';
 
 const List = (props) => {
   const {
@@ -9,23 +9,23 @@ const List = (props) => {
   } = props;
   const columns = [{
     title: '入库单号',
-    dataIndex: 'inStorageNo',
     width: 100,
+    render: 'inStorageNo',
   }, {
     title: '生产制单',
-    dataIndex: 'produceOrderId',
     width: 100,
+    render: 'produceOrderId',
   }, {
     title: '生产组',
-    dataIndex: 'productionGroup',
     width: 100,
+    render: 'productionGroup',
   }];
   return (
     <div>
       <Table
         bordered
-        rowKey="id"
-        dataSource={list}
+        keygen="id"
+        data={list}
         loading={dataLoading}
         columns={columns}
       />
