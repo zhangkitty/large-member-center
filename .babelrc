@@ -1,8 +1,7 @@
 {
   "presets": ["react-app"],
   "plugins": [
-    "syntax-dynamic-import",
-    "transform-object-rest-spread"
+    "syntax-dynamic-import"
   ],
   "env": {
     "test": {
